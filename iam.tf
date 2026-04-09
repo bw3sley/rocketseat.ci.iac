@@ -87,7 +87,7 @@ resource "aws_iam_role_policy" "ecr-app-permissions" {
 
 resource "aws_iam_role" "tf-role" {
   name = "tf-role"
-  
+
   assume_role_policy = jsonencode({
     "Version" : "2012-10-17",
     "Statement" : [
