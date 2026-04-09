@@ -7,8 +7,11 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = "us-east-2"
+variable "aws_profile" {
+  default = ""
+}
 
-  profile = "bw3sley"
+provider "aws" {
+  region  = "us-east-2"
+  profile = var.aws_profile != "" ? var.aws_profile : null
 }
