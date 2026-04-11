@@ -135,6 +135,12 @@ resource "aws_iam_role_policy" "tf-app-permissions" {
         Action   = "iam:*"
         Effect   = "Allow"
         Resource = "*"
+      },
+      {
+        Sid      = "Statement3"
+        Action   = "s3:*"
+        Effect   = "Allow"
+        Resource = "*"
       }
     ]
   })
